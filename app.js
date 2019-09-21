@@ -1,11 +1,16 @@
 console.log('worced');
 
 const purchaseAmount = 1000;
-const bonuses = 100;
+const avaliablebonuses = 1000;
 
-let total = purchaseAmount - bonuses;
-if (total <= 0) {
-     total = 0;
-} 
+const maxBonusesSpend = purchaseAmount * 0.5;
+let avaliableBonuses;
+if (maxBonusesSpend <=avaliablebonuses) {
+     avaliableBonuses = maxBonusesSpend;
+} else {
+    avaliableBonuses = avaliablebonuses;
+}
 
+console.log(avaliableBonuses);
+const total = purchaseAmount - avaliableBonuses;
 console.log(total);
