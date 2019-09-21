@@ -1,16 +1,13 @@
 console.log('worced');
 
 const purchaseAmount = 1000;
-const avaliablebonuses = 1000;
+const avaliableBonuses = 1000;
 
-const maxBonusesSpend = purchaseAmount * 0.5;
-let avaliableBonuses;
-if (maxBonusesSpend <=avaliablebonuses) {
-     avaliableBonuses = maxBonusesSpend;
-} else {
-    avaliableBonuses = avaliablebonuses;
-}
+const maxBonuses = purchaseAmount * 0.5;
 
-console.log(avaliableBonuses);
-const total = purchaseAmount - avaliableBonuses;
+// тернарный оператор
+const appliedBonuses = maxBonuses <= avaliableBonuses ? maxBonuses: avaliableBonuses;
+
+console.log(appliedBonuses);
+const total = purchaseAmount - appliedBonuses;
 console.log(total);
